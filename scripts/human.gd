@@ -139,3 +139,4 @@ func motion():
 func _on_vulnerable_area_area_entered(area):
 	if area.owner != self:
 		take_damage(area.owner.damage)
+		print(health)
