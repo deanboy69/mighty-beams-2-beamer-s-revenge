@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/old_scenes/player_basic.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/old_scenes/npc.tscn" type="PackedScene" id=2]
+
+
+
+[node name="testingField" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 454.22, 229.092 )
+
+[node name="npc" parent="." instance=ExtResource( 2 )]
+position = Vector2( 766.803, 189.436 )

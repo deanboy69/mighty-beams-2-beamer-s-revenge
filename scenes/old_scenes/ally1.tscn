@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/old_scenes/human_old.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/old_scripts/ally1.gd" type="Script" id=2]
+[ext_resource path="res://assets/images/ui/selectBox1.png" type="Texture" id=3]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=1]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 16.2069, 19.1519 )
+
+[node name="ally1" groups=[
+"allies",
+] instance=ExtResource( 1 )]
+modulate = Color( 0.431373, 0.905882, 0.976471, 1 )
+collision_layer = 2
+collision_mask = 78
+script = ExtResource( 2 )
+max_speed = 120
+rotation_speed = 5.0
+attack_speed = 0.0
+max_health = 20
+damage = 10
+turn_speed = 7.0
+
+[node name="area" parent="body/rightarm/rightarm1/rightarm2/item" index="0"]
+input_pickable = false
+
+[node name="AnimationTree" parent="." index="4"]
+parameters/playback = SubResource( 1 )
+
+[node name="selectArea" type="Area2D" parent="." index="5"]
+
+[node name="selectTexture" type="Sprite" parent="selectArea" index="0"]
+visible = false
+position = Vector2( 4.30975, 2.20941 )
+z_index = -1
+texture = ExtResource( 3 )
+
+[node name="selectRect" type="CollisionShape2D" parent="selectArea" index="1"]
+position = Vector2( 3.08429, 0.385529 )
+shape = SubResource( 2 )
+[connection signal="input_event" from="selectArea" to="." method="_on_selectArea_input_event"]
