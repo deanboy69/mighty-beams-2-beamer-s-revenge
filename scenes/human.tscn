@@ -26,19 +26,18 @@
 [ext_resource path="res://assets/animation/walking/frame10.png" type="Texture" id=24]
 [ext_resource path="res://assets/animation/walking/frame0.png" type="Texture" id=25]
 
-[sub_resource type="CapsuleShape2D" id=55]
+[sub_resource type="CapsuleShape2D" id=1]
 radius = 9.02902
 height = 2.1344
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id=2]
 radius = 2.9773
 height = 16.0935
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 7.58224, 1.37428 )
 
-[sub_resource type="Animation" id=3]
-resource_name = "TEST"
+[sub_resource type="Animation" id=4]
 length = 20.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("body/torso:texture")
@@ -545,8 +544,7 @@ tracks/41/keys = {
 "values": [ ExtResource( 10 ) ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "block2idle_shield_1hand"
+[sub_resource type="Animation" id=5]
 length = 0.4
 step = 0.05
 tracks/0/type = "value"
@@ -742,8 +740,7 @@ tracks/15/keys = {
 "values": [ Vector2( 5.20002, 1.91663 ), Vector2( 1.859, -0.911 ) ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "block2idle_shield_spear"
+[sub_resource type="Animation" id=6]
 length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("body/torso:texture")
@@ -1298,8 +1295,7 @@ tracks/45/keys = {
 "values": [ 3 ]
 }
 
-[sub_resource type="Animation" id=6]
-resource_name = "block_shield_1hand"
+[sub_resource type="Animation" id=7]
 length = 5.0
 loop = true
 step = 0.05
@@ -1472,8 +1468,7 @@ tracks/13/keys = {
 "values": [ Vector2( 5.20002, 1.91663 ) ]
 }
 
-[sub_resource type="Animation" id=7]
-resource_name = "block_shield_spear"
+[sub_resource type="Animation" id=8]
 length = 5.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("body/torso:texture")
@@ -2016,8 +2011,7 @@ tracks/44/keys = {
 "values": [ -2 ]
 }
 
-[sub_resource type="Animation" id=8]
-resource_name = "draw_bow"
+[sub_resource type="Animation" id=9]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("body/torso:texture")
@@ -2536,7 +2530,7 @@ tracks/42/keys = {
 "values": [ -2, -2 ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=10]
 length = 0.5
 step = 0.05
 tracks/0/type = "value"
@@ -2756,8 +2750,7 @@ tracks/17/keys = {
 "values": [ 15.8188, 15.8188, 1.16843 ]
 }
 
-[sub_resource type="Animation" id=10]
-resource_name = "idle2block_shield_spear"
+[sub_resource type="Animation" id=11]
 length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("body/torso:texture")
@@ -3312,8 +3305,7 @@ tracks/45/keys = {
 "values": [ 3 ]
 }
 
-[sub_resource type="Animation" id=11]
-resource_name = "idle_bow"
+[sub_resource type="Animation" id=12]
 length = 1.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("body/torso:texture")
@@ -3832,11 +3824,11 @@ tracks/42/keys = {
 "values": [ -2 ]
 }
 
-[sub_resource type="CapsuleShape2D" id=54]
+[sub_resource type="CapsuleShape2D" id=13]
 radius = 14.8386
 height = 1.16843
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=14]
 length = 1.5
 loop = true
 tracks/0/type = "value"
@@ -4341,7 +4333,7 @@ tracks/41/keys = {
 "times": PoolRealArray( 0, 1.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ SubResource( 2 ), SubResource( 2 ) ]
+"values": [ SubResource( 3 ), SubResource( 3 ) ]
 }
 tracks/42/type = "value"
 tracks/42/path = NodePath(".:z_index")
@@ -4473,7 +4465,7 @@ tracks/52/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ SubResource( 54 ) ]
+"values": [ SubResource( 13 ) ]
 }
 tracks/53/type = "value"
 tracks/53/path = NodePath("human_shape:position")
@@ -4524,7 +4516,7 @@ tracks/56/keys = {
 "values": [ 15.8188 ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=15]
 length = 1.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("body/torso:texture")
@@ -5031,8 +5023,7 @@ tracks/41/keys = {
 "values": [ ExtResource( 11 ) ]
 }
 
-[sub_resource type="Animation" id=14]
-resource_name = "loose_bow"
+[sub_resource type="Animation" id=16]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("body/torso:texture")
@@ -5587,8 +5578,7 @@ tracks/45/keys = {
 "values": [ 0 ]
 }
 
-[sub_resource type="Animation" id=15]
-resource_name = "ready_bow"
+[sub_resource type="Animation" id=17]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("body/torso:texture")
@@ -6107,8 +6097,7 @@ tracks/42/keys = {
 "values": [ -2, -2 ]
 }
 
-[sub_resource type="Animation" id=16]
-resource_name = "stab_shield_1hand"
+[sub_resource type="Animation" id=18]
 length = 0.2
 loop = true
 step = 0.05
@@ -6305,7 +6294,7 @@ tracks/15/keys = {
 "values": [ Vector2( 2.71994, 1.37428 ) ]
 }
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=19]
 length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("body/torso:texture")
@@ -6884,8 +6873,7 @@ tracks/47/keys = {
 "values": [ Vector2( 5.20002, 1.91663 ) ]
 }
 
-[sub_resource type="Animation" id=18]
-resource_name = "swingC_shield_1hand"
+[sub_resource type="Animation" id=20]
 length = 0.6
 step = 0.01
 tracks/0/type = "value"
@@ -7018,7 +7006,7 @@ tracks/10/keys = {
 "times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ SubResource( 2 ), SubResource( 2 ) ]
+"values": [ SubResource( 3 ), SubResource( 3 ) ]
 }
 tracks/11/type = "value"
 tracks/11/path = NodePath("right/upperArm_R/lowerArm_R/item_R/item_area_R/item_shape_R:position")
@@ -7081,7 +7069,7 @@ tracks/15/keys = {
 "values": [ Vector2( 1.85871, -0.910639 ) ]
 }
 
-[sub_resource type="Animation" id=19]
+[sub_resource type="Animation" id=21]
 length = 0.35
 step = 0.05
 tracks/0/type = "value"
@@ -7286,7 +7274,7 @@ tracks/16/keys = {
 "times": PoolRealArray( 0, 0.05, 0.1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ SubResource( 2 ), SubResource( 2 ), SubResource( 2 ) ]
+"values": [ SubResource( 3 ), SubResource( 3 ), SubResource( 3 ) ]
 }
 tracks/17/type = "value"
 tracks/17/path = NodePath("right/upperArm_R/lowerArm_R/item_R/item_area_R/item_shape_R:position")
@@ -7349,7 +7337,7 @@ tracks/21/keys = {
 "values": [ 15.8188 ]
 }
 
-[sub_resource type="Animation" id=20]
+[sub_resource type="Animation" id=22]
 length = 0.6
 step = 0.05
 tracks/0/type = "value"
@@ -7494,7 +7482,7 @@ tracks/11/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ SubResource( 2 ) ]
+"values": [ SubResource( 3 ) ]
 }
 tracks/12/type = "value"
 tracks/12/path = NodePath("right/upperArm_R/lowerArm_R/item_R/item_area_R/item_shape_R:position")
@@ -7557,8 +7545,7 @@ tracks/16/keys = {
 "values": [ 15.8188 ]
 }
 
-[sub_resource type="Animation" id=21]
-resource_name = "swingW_shield_1hand"
+[sub_resource type="Animation" id=23]
 length = 0.6
 step = 0.05
 tracks/0/type = "value"
@@ -8159,7 +8146,7 @@ tracks/49/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ SubResource( 2 ) ]
+"values": [ SubResource( 3 ) ]
 }
 tracks/50/type = "value"
 tracks/50/path = NodePath("right/upperArm_R/lowerArm_R/item_R/item_area_R/item_shape_R:shape:extents")
@@ -8174,7 +8161,7 @@ tracks/50/keys = {
 "values": [ Vector2( 7.58224, 1.37428 ) ]
 }
 
-[sub_resource type="Animation" id=22]
+[sub_resource type="Animation" id=24]
 length = 0.5
 loop = true
 step = 0.05
@@ -8299,7 +8286,7 @@ tracks/9/keys = {
 "values": [ Vector2( 1.85871, -0.910639 ) ]
 }
 
-[sub_resource type="Animation" id=23]
+[sub_resource type="Animation" id=25]
 length = 0.75
 loop = true
 step = 0.05
@@ -8328,7 +8315,7 @@ tracks/1/keys = {
 "values": [ -41.7979 ]
 }
 
-[sub_resource type="Animation" id=24]
+[sub_resource type="Animation" id=26]
 length = 0.75
 loop = true
 step = 0.05
@@ -8357,7 +8344,7 @@ tracks/1/keys = {
 "values": [ 41.8 ]
 }
 
-[sub_resource type="Animation" id=25]
+[sub_resource type="Animation" id=27]
 length = 1.1
 loop = true
 tracks/0/type = "value"
@@ -8385,41 +8372,35 @@ tracks/1/keys = {
 "values": [ 0.0 ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=26]
+[sub_resource type="AnimationNodeAnimation" id=28]
 animation = "block2idle_shield_1hand"
 
-[sub_resource type="AnimationNodeAnimation" id=27]
+[sub_resource type="AnimationNodeAnimation" id=29]
 animation = "block_shield_1hand"
 
-[sub_resource type="AnimationNodeAnimation" id=28]
+[sub_resource type="AnimationNodeAnimation" id=30]
 animation = "idle2block_shield_1hand"
 
-[sub_resource type="AnimationNodeAnimation" id=29]
+[sub_resource type="AnimationNodeAnimation" id=31]
 animation = "idle_shield_1hand"
 
-[sub_resource type="AnimationNodeAnimation" id=30]
+[sub_resource type="AnimationNodeAnimation" id=32]
 animation = "stab_shield_1hand"
 
-[sub_resource type="AnimationNodeAnimation" id=31]
+[sub_resource type="AnimationNodeAnimation" id=33]
 animation = "swingC_shield_1hand"
 
-[sub_resource type="AnimationNodeAnimation" id=32]
+[sub_resource type="AnimationNodeAnimation" id=34]
 animation = "swingL_shield_1hand"
 
-[sub_resource type="AnimationNodeAnimation" id=33]
+[sub_resource type="AnimationNodeAnimation" id=35]
 animation = "swingR_shield_1hand"
 
-[sub_resource type="AnimationNodeAnimation" id=34]
+[sub_resource type="AnimationNodeAnimation" id=36]
 animation = "swingW_shield_1hand"
 
-[sub_resource type="AnimationNodeAnimation" id=35]
+[sub_resource type="AnimationNodeAnimation" id=37]
 animation = "walking_shield_1hand"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=36]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=37]
-switch_mode = 2
-auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=38]
 
@@ -8463,32 +8444,38 @@ auto_advance = true
 switch_mode = 2
 auto_advance = true
 
-[sub_resource type="AnimationNodeStateMachine" id=52]
-states/block2idle_shield_1hand/node = SubResource( 26 )
+[sub_resource type="AnimationNodeStateMachineTransition" id=52]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=53]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachine" id=54]
+states/block2idle_shield_1hand/node = SubResource( 28 )
 states/block2idle_shield_1hand/position = Vector2( 243, 321 )
-states/block_shield_1hand/node = SubResource( 27 )
+states/block_shield_1hand/node = SubResource( 29 )
 states/block_shield_1hand/position = Vector2( 143, 250 )
-states/idle2block_shield_1hand/node = SubResource( 28 )
+states/idle2block_shield_1hand/node = SubResource( 30 )
 states/idle2block_shield_1hand/position = Vector2( 243, 178 )
-states/idle_shield_1hand/node = SubResource( 29 )
+states/idle_shield_1hand/node = SubResource( 31 )
 states/idle_shield_1hand/position = Vector2( 390, 103 )
-states/stab_shield_1hand/node = SubResource( 30 )
+states/stab_shield_1hand/node = SubResource( 32 )
 states/stab_shield_1hand/position = Vector2( -73, 250 )
-states/swingC_shield_1hand/node = SubResource( 31 )
+states/swingC_shield_1hand/node = SubResource( 33 )
 states/swingC_shield_1hand/position = Vector2( 671, 120 )
-states/swingL_shield_1hand/node = SubResource( 32 )
+states/swingL_shield_1hand/node = SubResource( 34 )
 states/swingL_shield_1hand/position = Vector2( 671, 58 )
-states/swingR_shield_1hand/node = SubResource( 33 )
+states/swingR_shield_1hand/node = SubResource( 35 )
 states/swingR_shield_1hand/position = Vector2( 671, 184 )
-states/swingW_shield_1hand/node = SubResource( 34 )
+states/swingW_shield_1hand/node = SubResource( 36 )
 states/swingW_shield_1hand/position = Vector2( 671, -8 )
-states/walking_shield_1hand/node = SubResource( 35 )
+states/walking_shield_1hand/node = SubResource( 37 )
 states/walking_shield_1hand/position = Vector2( 390, -8 )
-transitions = [ "idle_shield_1hand", "idle2block_shield_1hand", SubResource( 36 ), "idle2block_shield_1hand", "block_shield_1hand", SubResource( 37 ), "block_shield_1hand", "block2idle_shield_1hand", SubResource( 38 ), "block2idle_shield_1hand", "idle_shield_1hand", SubResource( 39 ), "block_shield_1hand", "stab_shield_1hand", SubResource( 40 ), "stab_shield_1hand", "block_shield_1hand", SubResource( 41 ), "idle_shield_1hand", "swingL_shield_1hand", SubResource( 42 ), "swingL_shield_1hand", "idle_shield_1hand", SubResource( 43 ), "idle_shield_1hand", "swingC_shield_1hand", SubResource( 44 ), "swingC_shield_1hand", "idle_shield_1hand", SubResource( 45 ), "idle_shield_1hand", "swingR_shield_1hand", SubResource( 46 ), "swingR_shield_1hand", "idle_shield_1hand", SubResource( 47 ), "idle_shield_1hand", "walking_shield_1hand", SubResource( 48 ), "walking_shield_1hand", "idle_shield_1hand", SubResource( 49 ), "walking_shield_1hand", "swingW_shield_1hand", SubResource( 50 ), "swingW_shield_1hand", "walking_shield_1hand", SubResource( 51 ) ]
+transitions = [ "idle_shield_1hand", "idle2block_shield_1hand", SubResource( 38 ), "idle2block_shield_1hand", "block_shield_1hand", SubResource( 39 ), "block_shield_1hand", "block2idle_shield_1hand", SubResource( 40 ), "block2idle_shield_1hand", "idle_shield_1hand", SubResource( 41 ), "block_shield_1hand", "stab_shield_1hand", SubResource( 42 ), "stab_shield_1hand", "block_shield_1hand", SubResource( 43 ), "idle_shield_1hand", "swingL_shield_1hand", SubResource( 44 ), "swingL_shield_1hand", "idle_shield_1hand", SubResource( 45 ), "idle_shield_1hand", "swingC_shield_1hand", SubResource( 46 ), "swingC_shield_1hand", "idle_shield_1hand", SubResource( 47 ), "idle_shield_1hand", "swingR_shield_1hand", SubResource( 48 ), "swingR_shield_1hand", "idle_shield_1hand", SubResource( 49 ), "idle_shield_1hand", "walking_shield_1hand", SubResource( 50 ), "walking_shield_1hand", "idle_shield_1hand", SubResource( 51 ), "walking_shield_1hand", "swingW_shield_1hand", SubResource( 52 ), "swingW_shield_1hand", "walking_shield_1hand", SubResource( 53 ) ]
 start_node = "idle_shield_1hand"
 graph_offset = Vector2( -190, -46 )
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=53]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=55]
 
 [node name="human" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -8499,7 +8486,7 @@ collision_mask = 2
 
 [node name="vulnerable_shape" type="CollisionShape2D" parent="vulnerable_area"]
 position = Vector2( 0.566811, -0.755747 )
-shape = SubResource( 55 )
+shape = SubResource( 1 )
 
 [node name="body" type="Node2D" parent="."]
 
@@ -8559,7 +8546,7 @@ texture = ExtResource( 7 )
 
 [node name="item_shape_L" type="CollisionShape2D" parent="left/upperArm_L/lowerArm_L/item_L/item_area_L"]
 position = Vector2( -0.1215, -0.13825 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="right" type="Node2D" parent="."]
 rotation = 0.309397
@@ -8597,44 +8584,44 @@ texture = ExtResource( 10 )
 
 [node name="item_shape_R" type="CollisionShape2D" parent="right/upperArm_R/lowerArm_R/item_R/item_area_R"]
 position = Vector2( 2.72963, -0.216308 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 disabled = true
 
 [node name="animations" type="AnimationPlayer" parent="."]
-anims/TEST = SubResource( 3 )
-anims/block2idle_shield_1hand = SubResource( 4 )
-anims/block2idle_shield_spear = SubResource( 5 )
-anims/block_shield_1hand = SubResource( 6 )
-anims/block_shield_spear = SubResource( 7 )
-anims/draw_bow = SubResource( 8 )
-anims/idle2block_shield_1hand = SubResource( 9 )
-anims/idle2block_shield_spear = SubResource( 10 )
-anims/idle_bow = SubResource( 11 )
-anims/idle_shield_1hand = SubResource( 12 )
-anims/idle_shield_spear = SubResource( 13 )
-anims/loose_bow = SubResource( 14 )
-anims/ready_bow = SubResource( 15 )
-anims/stab_shield_1hand = SubResource( 16 )
-anims/stab_shield_spear = SubResource( 17 )
-anims/swingC_shield_1hand = SubResource( 18 )
-anims/swingL_shield_1hand = SubResource( 19 )
-anims/swingR_shield_1hand = SubResource( 20 )
-anims/swingW_shield_1hand = SubResource( 21 )
-anims/walking_shield_1hand = SubResource( 22 )
+anims/TEST = SubResource( 4 )
+anims/block2idle_shield_1hand = SubResource( 5 )
+anims/block2idle_shield_spear = SubResource( 6 )
+anims/block_shield_1hand = SubResource( 7 )
+anims/block_shield_spear = SubResource( 8 )
+anims/draw_bow = SubResource( 9 )
+anims/idle2block_shield_1hand = SubResource( 10 )
+anims/idle2block_shield_spear = SubResource( 11 )
+anims/idle_bow = SubResource( 12 )
+anims/idle_shield_1hand = SubResource( 14 )
+anims/idle_shield_spear = SubResource( 15 )
+anims/loose_bow = SubResource( 16 )
+anims/ready_bow = SubResource( 17 )
+anims/stab_shield_1hand = SubResource( 18 )
+anims/stab_shield_spear = SubResource( 19 )
+anims/swingC_shield_1hand = SubResource( 20 )
+anims/swingL_shield_1hand = SubResource( 21 )
+anims/swingR_shield_1hand = SubResource( 22 )
+anims/swingW_shield_1hand = SubResource( 23 )
+anims/walking_shield_1hand = SubResource( 24 )
 
 [node name="movement" type="AnimationPlayer" parent="."]
-anims/shiftingL = SubResource( 23 )
-anims/shiftingR = SubResource( 24 )
-anims/walking = SubResource( 25 )
+anims/shiftingL = SubResource( 25 )
+anims/shiftingR = SubResource( 26 )
+anims/walking = SubResource( 27 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 52 )
+tree_root = SubResource( 54 )
 anim_player = NodePath("../animations")
-parameters/playback = SubResource( 53 )
+parameters/playback = SubResource( 55 )
 
 [node name="human_shape" type="CollisionShape2D" parent="."]
 position = Vector2( 5.20002, 1.91663 )
-shape = SubResource( 54 )
+shape = SubResource( 13 )
 
 [node name="melee_range" type="RayCast2D" parent="."]
 position = Vector2( 0, 2 )

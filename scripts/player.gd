@@ -2,6 +2,7 @@ extends "res://scripts/human.gd"
 
 onready var global = get_node("/root/global_variables")
 
+var desired_x
 
 func _ready():
 	pass
@@ -15,6 +16,8 @@ func control(delta):
 	rotation_dir = 0
 	if $player_camera.is_current():
 		if Input.is_action_pressed('move_forward'):
+#			desired_x = linear_speed*rotation_dir - velocity.x
+#			velocity = Vector2(clamp(desired_x,-linear_acc,linear_acc),0).rotated(rotation)
 			velocity = Vector2(linear_speed,0).rotated(rotation)
 		if Input.is_action_pressed('move_backward'):
 			velocity = Vector2(-linear_speed/2,0).rotated(rotation)

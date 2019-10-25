@@ -3,6 +3,7 @@ extends KinematicBody2D
 
 #speed & movement
 export (int) var linear_speed #= 200
+export (int) var collision_weight
 var velocity = Vector2()
 export (float) var rotation_speed #=3
 export (float) var rotation_dir #= 0
@@ -38,6 +39,26 @@ var frame11 = preload('res://assets/animation/walking/frame11.png')
 
 signal health_changed
 
+
+
+
+
+
+#const MAX_SPEED, ACC
+#
+#var velocity = Vector2(0,0)
+#
+#
+#func _physics_process
+#    var dir = 0
+#    if input_left
+#        dir -= 1
+#    if input_right
+#        dir += 1
+#    desired_x = MAX_SPEED*dir - velocity.x
+#    velocity += Vector2(clamp(desired_x, -ACC, ACC), 0)
+#    move_and_slide(velocity)
+
 func _ready():
 	health = max_health
 	alive = true
@@ -54,6 +75,11 @@ func _physics_process(delta):
 	if alive:
 		control(delta)
 		move_and_slide(velocity)
+		
+		if get_slide_count() != 0 :
+			print('asdfasdf')
+			for i in range (0,get_slide_count()) :
+				print(get_slide_collision(i))
 		motion()
 
 func die():
