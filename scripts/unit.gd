@@ -31,8 +31,11 @@ func _ready():
 
 
 func _process(delta):
+
+	rot_dir += 0.1
 	set_button_locations()
 	update_rect()
+	set_rotation(1 + rot_dir)
 
 	
 
