@@ -5,7 +5,7 @@ var player_character = null
 var players = []
 
 func _ready():
- player_character = preload("res://scenes/player.tscn")
+ player_character = preload("res://scenes/player/player.tscn")
  get_tree().connect("connected_to_server", self, "_connected_ok")
 
 func on_host_game():

@@ -77,7 +77,8 @@ func _physics_process(delta):
 
 		for i in get_slide_count():
 			var collision = get_slide_collision(i)
-			print("Collided with: ", collision.collider.name)
+			if collision != null:
+				print("Collided with: ", collision.collider.name)
 
 
 		motion()

@@ -1,4 +1,4 @@
-extends "res://scripts/human.gd"
+extends "res://scenes/human/human.gd"
 
 onready var global = get_node("/root/global_variables")
 

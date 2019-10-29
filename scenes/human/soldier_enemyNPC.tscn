@@ -1,7 +1,10 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://scenes/human.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scripts/soldier_enemyNPC.gd" type="Script" id=2]
+[ext_resource path="res://scenes/human/human.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/human/soldier_enemyNPC.gd" type="Script" id=2]
+
+
+
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
