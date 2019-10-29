@@ -74,13 +74,14 @@ func _process(delta):
 func _physics_process(delta):
 	if alive:
 		control(delta)
-		move_and_slide(velocity)
-		
-		if get_slide_count() != 0 :
-			print('asdfasdf')
-			for i in range (0,get_slide_count()) :
-				print(get_slide_collision(i))
+
+		for i in get_slide_count():
+			var collision = get_slide_collision(i)
+			print("Collided with: ", collision.collider.name)
+
+
 		motion()
+		move_and_slide(velocity)
 
 func die():
 	queue_free()

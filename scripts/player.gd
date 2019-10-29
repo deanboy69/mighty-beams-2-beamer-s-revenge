@@ -12,6 +12,7 @@ func _process(delta):
 	
 
 func control(delta):
+	#MOVEMENT
 	velocity = Vector2()
 	rotation_dir = 0
 	if $player_camera.is_current():
@@ -36,6 +37,8 @@ func control(delta):
 				movement_type = 'normal'
 				rotation_dir -= 1
 		rotation += rotation_speed*rotation_dir*delta
+		
+		#COMBAT
 		if Input.is_action_just_released('left_mouse_button'):
 			if blocking == false:
 				if velocity == Vector2(0,0):
