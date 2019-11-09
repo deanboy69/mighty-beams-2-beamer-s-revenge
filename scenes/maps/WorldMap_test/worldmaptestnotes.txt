@@ -1,0 +1,91 @@
+World Map (Demo):
+
+* Start
+o *5 factions
+o *2 generals per faction
+o *4 agents (1 of each) per faction
+o *1 city owned per faction
+o *3 towns owned per faction (all in same region as city)
+o 10 non-aligned towns (rebels)
+o 5 non-aligned armies (rebels)
+* *Faction AIs
+o Expansive
+* Requirements
+* Hit certain $ base wealth AND
+* Wealth growth continuous for x amt of time
+* Actions
+* Produce army of randrange(5-8) units
+* March army to nearest non-owned non-allied town
+* Besiege town
+o Defensive
+* Requirements
+* Wealth falls below certain threshold OR
+* Wealth growth falls for x amt of time
+* Actions
+o Non-aligned (rebels)
+* Requirements
+* Control only 1 town OR
+* Have only one general/leader
+* Actions
+* Protect owned town or patrol region
+* No economic growth
+* Recurring events
+o Weekly gains
+* Tax collection from towns
+* Trade revenue
+* Agents
+o Envoy
+* Can interact with any leader, agent or town and negotiate
+* Higher skill, higher ability to persuade
+* AI behavior
+* Station near towns, nearest town that does not have an envoy next to it
+* Approach merchants or caravans and request payment for safe passage through region  & trade rights at faction’s towns/cities
+o Spy
+* Can interact with any army, agent or town to gain information
+* Higher skill, higher line-of-sight radius wherever positioned
+* AI behavior
+* Scout entire map so that towns are known to faction
+o Assassin
+* Can interact with any army, agent or town to assassinate
+* Higher skill, higher chance of success
+* AI behavior
+* Do nothing
+o Merchant
+* Can interact with resource objects on map
+* Higher skill, faster ability to collect
+* Sends caravans to any town to collect, must stay at resource site for caravan to return
+* Farther distance, greater likelihood of resource rarity
+* Payment is based on resource rarity
+* AI behavior
+* Find nearest resource, return to nearest town once at capacity
+o Caravan
+* Can interact with towns, other caravans, merchants, envoys
+* Must have trade rights established with faction owning town intending to deliver
+* Can trade with caravans encountered en route, cannot attack them
+* Can request trade rights with town making delivery
+o Townsfolk
+* Delivers weekly tribute from town to city in region
+* Can be attacked and looted, decreasing town populations and increasing instability
+o General/Captain
+* Can confront armies/caravans/townsfolk and attack or demand payment not to attack (individual or factional level)
+* When entering foreign region, they tend to send a cavalry unit patrolling border to make this request of you
+* Battles
+o Auto-resolved for AI
+* Town management
+o No construction
+
+
+
+
+
+Before exiting, ALL data is saved so that upon reopening the game resumes as it was.
+If army is being tailed by a spy, that spy might not be visible unless the army itself has a spy in its company. To get a spy to stop following army, must use assassin. Assassin can only complete one mission per x amt of time.
+If large enough garrison not in town and town is poorly managed, revolt can occur. Can be quashed in battle sequence.
+Rename “Units” to “Army” and “Guards” to “Company”
+Traits
+Random events:
+- Son (legitimate or illegitimate) joins ranks
+- Rebel horde invades region
+- Games held at towns, cities, or side of road
+- Natural disaster (flood, fire, tornado, earthquake)
+Game details panel containing faction diplomacy grid (who is allied, neutral, or at war with who), as well as recent activity. Wealth ranking (no details)?
