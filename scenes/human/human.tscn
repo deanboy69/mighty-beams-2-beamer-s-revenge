@@ -26,6 +26,9 @@
 [ext_resource path="res://assets/animation/walking/frame10.png" type="Texture" id=24]
 [ext_resource path="res://assets/animation/walking/frame0.png" type="Texture" id=25]
 
+
+
+
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 9.02902
 height = 2.1344
@@ -35,7 +38,7 @@ radius = 2.9773
 height = 16.0935
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 7.58224, 1.37428 )
+extents = Vector2( 2.72, 1.374 )
 
 [sub_resource type="Animation" id=4]
 length = 20.0
@@ -680,7 +683,7 @@ tracks/10/keys = {
 "values": [ Vector2( 11.195, 4.094 ), Vector2( 14.591, 3.424 ) ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("right/upperArm_R/lowerArm_R/item_R/item_area_R:monitoring")
+tracks/11/path = NodePath("human_shape:shape:radius")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/imported = false
@@ -688,11 +691,11 @@ tracks/11/enabled = true
 tracks/11/keys = {
 "times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
+"update": 0,
+"values": [ 14.8386, 10.469 ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("right/upperArm_R/lowerArm_R/item_R/item_area_R:monitorable")
+tracks/12/path = NodePath("human_shape:shape:height")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
@@ -700,40 +703,16 @@ tracks/12/enabled = true
 tracks/12/keys = {
 "times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
+"update": 0,
+"values": [ 1.16843, 15.819 ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("human_shape:shape:radius")
+tracks/13/path = NodePath("human_shape:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
 tracks/13/enabled = true
 tracks/13/keys = {
-"times": PoolRealArray( 0, 0.4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 14.8386, 10.469 ]
-}
-tracks/14/type = "value"
-tracks/14/path = NodePath("human_shape:shape:height")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/keys = {
-"times": PoolRealArray( 0, 0.4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ 1.16843, 15.819 ]
-}
-tracks/15/type = "value"
-tracks/15/path = NodePath("human_shape:position")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/keys = {
 "times": PoolRealArray( 0, 0.4 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
@@ -1466,6 +1445,18 @@ tracks/13/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 5.20002, 1.91663 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("right/upperArm_R/lowerArm_R/item_R/item_area_R/item_shape_R:shape:extents")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 2.71994, 1.37428 ) ]
 }
 
 [sub_resource type="Animation" id=8]
@@ -2690,64 +2681,52 @@ tracks/12/keys = {
 "values": [ Vector2( 14.5913, 3.42367 ), Vector2( 14.5913, 3.42367 ), Vector2( 11.195, 4.094 ) ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("right/upperArm_R/lowerArm_R/item_R/item_area_R:monitoring")
+tracks/13/path = NodePath("human_shape:position")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
 tracks/13/enabled = true
 tracks/13/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-tracks/14/type = "value"
-tracks/14/path = NodePath("right/upperArm_R/lowerArm_R/item_R/item_area_R:monitorable")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, true ]
-}
-tracks/15/type = "value"
-tracks/15/path = NodePath("human_shape:position")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/keys = {
 "times": PoolRealArray( 0, 0.3, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1.85871, -0.910639 ), Vector2( 1.85871, -0.910639 ), Vector2( 5.20002, 1.91663 ) ]
 }
-tracks/16/type = "value"
-tracks/16/path = NodePath("human_shape:shape:radius")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/keys = {
+tracks/14/type = "value"
+tracks/14/path = NodePath("human_shape:shape:radius")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
 "times": PoolRealArray( 0, 0.3, 0.45 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 10.4692, 10.4692, 14.8386 ]
 }
-tracks/17/type = "value"
-tracks/17/path = NodePath("human_shape:shape:height")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/keys = {
+tracks/15/type = "value"
+tracks/15/path = NodePath("human_shape:shape:height")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
 "times": PoolRealArray( 0, 0.3, 0.45 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 15.8188, 15.8188, 1.16843 ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("right/upperArm_R/lowerArm_R/item_R/item_area_R/item_shape_R:shape:extents")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 2.71994, 1.37428 ) ]
 }
 
 [sub_resource type="Animation" id=11]
@@ -3825,8 +3804,8 @@ tracks/42/keys = {
 }
 
 [sub_resource type="CapsuleShape2D" id=13]
-radius = 14.8386
-height = 1.16843
+radius = 10.4692
+height = 15.8188
 
 [sub_resource type="Animation" id=14]
 length = 1.5
@@ -4210,10 +4189,10 @@ tracks/31/loop_wrap = true
 tracks/31/imported = false
 tracks/31/enabled = true
 tracks/31/keys = {
-"times": PoolRealArray( 0, 1.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 2.0044, -0.217536 ), Vector2( 2.0044, -0.217536 ) ]
+"values": [ Vector2( 7.18916, -0.401283 ) ]
 }
 tracks/32/type = "value"
 tracks/32/path = NodePath("right/upperArm_R/lowerArm_R/item_R:position")
@@ -4489,7 +4468,7 @@ tracks/54/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 7.58224, 1.37428 ) ]
+"values": [ Vector2( 2.72, 1.374 ) ]
 }
 tracks/55/type = "value"
 tracks/55/path = NodePath("human_shape:shape:radius")
@@ -4514,6 +4493,30 @@ tracks/56/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 15.8188 ]
+}
+tracks/57/type = "value"
+tracks/57/path = NodePath("human_shape:disabled")
+tracks/57/interp = 1
+tracks/57/loop_wrap = true
+tracks/57/imported = false
+tracks/57/enabled = true
+tracks/57/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/58/type = "value"
+tracks/58/path = NodePath("vulnerable_area/vulnerable_shape:disabled")
+tracks/58/interp = 1
+tracks/58/loop_wrap = true
+tracks/58/imported = false
+tracks/58/enabled = true
+tracks/58/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
 }
 
 [sub_resource type="Animation" id=15]
@@ -6246,7 +6249,7 @@ tracks/11/keys = {
 "values": [ Vector2( 1.20785, 7.01068 ), Vector2( 1.77632, 6.82896 ), Vector2( 1.20785, 7.01068 ) ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("right/upperArm_R/lowerArm_R/item_R/item_area_R/item_shape_R:shape")
+tracks/12/path = NodePath("right/upperArm_R/lowerArm_R/item_R/item_area_R/item_shape_R:position")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/imported = false
@@ -6254,44 +6257,32 @@ tracks/12/enabled = true
 tracks/12/keys = {
 "times": PoolRealArray(  ),
 "transitions": PoolRealArray(  ),
-"update": 1,
+"update": 0,
 "values": [  ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("right/upperArm_R/lowerArm_R/item_R/item_area_R/item_shape_R:position")
+tracks/13/path = NodePath("right/upperArm_R/lowerArm_R/item_R/item_area_R/item_shape_R:disabled")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/imported = false
 tracks/13/enabled = true
 tracks/13/keys = {
-"times": PoolRealArray(  ),
-"transitions": PoolRealArray(  ),
-"update": 0,
-"values": [  ]
-}
-tracks/14/type = "value"
-tracks/14/path = NodePath("right/upperArm_R/lowerArm_R/item_R/item_area_R/item_shape_R:disabled")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ true, false, true ]
 }
-tracks/15/type = "value"
-tracks/15/path = NodePath("right/upperArm_R/lowerArm_R/item_R/item_area_R/item_shape_R:shape:extents")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+tracks/14/type = "value"
+tracks/14/path = NodePath("right/upperArm_R/lowerArm_R/item_R/item_area_R/item_shape_R:shape:extents")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 2.71994, 1.37428 ) ]
+"values": [ Vector2( 2.71994, 1.37428 ), Vector2( 2.71994, 1.37428 ) ]
 }
 
 [sub_resource type="Animation" id=19]
@@ -8492,33 +8483,28 @@ shape = SubResource( 1 )
 
 [node name="legs" type="Sprite" parent="body"]
 position = Vector2( 0.92013, 0 )
-rotation = -0.729511
 scale = Vector2( 0.781158, 1 )
 texture = ExtResource( 2 )
 
 [node name="torso" type="Sprite" parent="body"]
-rotation = 0.523599
 z_index = 1
 texture = ExtResource( 3 )
 
 [node name="head" type="Sprite" parent="body"]
 position = Vector2( 3.52917, 0.00727844 )
-rotation = 0.176278
 z_index = 2
 texture = ExtResource( 4 )
 
 [node name="left" type="Node2D" parent="."]
 
 [node name="upperArm_L" type="Sprite" parent="left"]
-position = Vector2( 3.6681, -7.59977 )
-rotation = 2.67777
+position = Vector2( 3.04005, -5.40162 )
 z_index = 1
 texture = ExtResource( 5 )
 offset = Vector2( -4.13882, -3.47075 )
 
 [node name="lowerArm_L" type="Sprite" parent="left/upperArm_L"]
 position = Vector2( -7.42286, -7.90543 )
-rotation = -1.10423
 z_index = 1
 texture = ExtResource( 6 )
 offset = Vector2( 5.46427, -0.912051 )
@@ -8535,13 +8521,12 @@ __meta__ = {
 
 [node name="item_area_L" type="Area2D" parent="left/upperArm_L/lowerArm_L/item_L"]
 position = Vector2( -6.46851, 9.61536 )
-rotation = 1.52071
+rotation = 1.309
 monitoring = false
 monitorable = false
 
 [node name="item_sprite_L" type="Sprite" parent="left/upperArm_L/lowerArm_L/item_L/item_area_L"]
 scale = Vector2( 0.35, 0.35 )
-z_index = -1
 texture = ExtResource( 7 )
 
 [node name="item_shape_L" type="CollisionShape2D" parent="left/upperArm_L/lowerArm_L/item_L/item_area_L"]
@@ -8552,8 +8537,7 @@ shape = SubResource( 2 )
 rotation = 0.309397
 
 [node name="upperArm_R" type="Sprite" parent="right"]
-position = Vector2( 1.16553, 4.65222 )
-rotation = 0.19707
+position = Vector2( 1.20785, 7.01068 )
 z_index = 1
 texture = ExtResource( 8 )
 offset = Vector2( -2.42871, 2.22795 )
@@ -8561,20 +8545,19 @@ offset = Vector2( -2.42871, 2.22795 )
 [node name="lowerArm_R" type="Sprite" parent="right/upperArm_R"]
 show_behind_parent = true
 position = Vector2( -8.09947, 4.17762 )
-rotation = -0.138331
+z_index = 1
 texture = ExtResource( 9 )
 offset = Vector2( 7.90586, 1.1865 )
 
 [node name="item_R" type="Node2D" parent="right/upperArm_R/lowerArm_R"]
 show_behind_parent = true
-position = Vector2( 11.1947, 4.09414 )
-rotation = -0.349066
+position = Vector2( 14.5913, 3.42367 )
+rotation = -1.26687
+z_index = 1
 z_as_relative = false
 
 [node name="item_area_R" type="Area2D" parent="right/upperArm_R/lowerArm_R/item_R"]
 position = Vector2( 10.6652, 0.0906825 )
-monitoring = false
-monitorable = false
 collision_layer = 2
 collision_mask = 0
 
@@ -8583,7 +8566,7 @@ scale = Vector2( 0.4, 0.5 )
 texture = ExtResource( 10 )
 
 [node name="item_shape_R" type="CollisionShape2D" parent="right/upperArm_R/lowerArm_R/item_R/item_area_R"]
-position = Vector2( 2.72963, -0.216308 )
+position = Vector2( 7.18916, -0.401283 )
 shape = SubResource( 3 )
 disabled = true
 
@@ -8620,7 +8603,8 @@ anim_player = NodePath("../animations")
 parameters/playback = SubResource( 55 )
 
 [node name="human_shape" type="CollisionShape2D" parent="."]
-position = Vector2( 5.20002, 1.91663 )
+visible = false
+position = Vector2( 1.85871, -0.910639 )
 shape = SubResource( 13 )
 
 [node name="melee_range" type="RayCast2D" parent="."]
@@ -8635,4 +8619,7 @@ cast_to = Vector2( 12, 0 )
 
 [node name="moveback_timer" type="Timer" parent="."]
 one_shot = true
+
+[node name="lineup_pos" type="Position2D" parent="."]
+position = Vector2( -42.3012, 0 )
 [connection signal="area_entered" from="vulnerable_area" to="." method="_on_vulnerable_area_area_entered"]

@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scripts/old_scripts/map2.gd" type="Script" id=1]
 [ext_resource path="res://assets/images/terrain/terrain_tiles.tres" type="TileSet" id=2]
-[ext_resource path="res://scenes/player/player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/human/player/player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/old_scenes/soldier_team1.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scripts/old_scripts/Camera2D.gd" type="Script" id=5]
 [ext_resource path="res://assets/images/ui/panel1.png" type="Texture" id=6]
@@ -44,6 +44,9 @@ position = Vector2( 455.714, 249.433 )
 
 [node name="soldier_team1" parent="." instance=ExtResource( 4 )]
 position = Vector2( 159.228, 322.568 )
+collision_weight = 0
+rotation_speed = 0.0
+rotation_dir = 0.0
 
 [node name="boundary_north" type="StaticBody2D" parent="."]
 position = Vector2( 1223.33, -48.8032 )

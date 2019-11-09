@@ -2,5 +2,8 @@
 
 [ext_resource path="res://scenes/unit_formation/unit.gd" type="Script" id=1]
 
+
+
+
 [node name="unit" type="Control"]
 script = ExtResource( 1 )

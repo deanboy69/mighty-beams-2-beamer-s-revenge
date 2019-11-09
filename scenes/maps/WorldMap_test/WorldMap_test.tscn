@@ -1,0 +1,80 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://scenes/maps/WorldMap_test/WorldMap_test.gd" type="Script" id=1]
+[ext_resource path="res://assets/maps/WorldMap_test/World_Map.png" type="Texture" id=2]
+[ext_resource path="res://assets/maps/WorldMap_test/town_icon.png" type="Texture" id=3]
+[ext_resource path="res://assets/maps/WorldMap_test/resources/resource_meat.png" type="Texture" id=4]
+[ext_resource path="res://scenes/maps/WorldMap_test/Agents/Envoy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/maps/WorldMap_test/Agents/Assassin.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/maps/WorldMap_test/Agents/Spy.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/gui/camera/LensEffect.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/gui/dashboard/BottomGUI.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/maps/WorldMap_test/WorldMap_Camera.tscn" type="PackedScene" id=10]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 4.84101, 4.04866 )
+
+[sub_resource type="CircleShape2D" id=9]
+radius = 4.98246
+
+[node name="WorldMap_test" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="MapTexture" type="Sprite" parent="."]
+position = Vector2( 512, 300 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 515.016, 515.359, 1024, 600 )
+
+[node name="Town" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 248.508, 188.089 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TownTexture" type="Sprite" parent="Town"]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Town"]
+shape = SubResource( 1 )
+
+[node name="Resource" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 231.158, 221.892 )
+
+[node name="ResourceTexture" type="Sprite" parent="Resource"]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Resource"]
+shape = SubResource( 9 )
+
+[node name="Envoy" parent="." instance=ExtResource( 5 )]
+editor/display_folded = true
+position = Vector2( 238.422, 179.743 )
+
+[node name="Assassin" parent="." instance=ExtResource( 6 )]
+editor/display_folded = true
+position = Vector2( 248.831, 178.211 )
+
+[node name="Spy" parent="." instance=ExtResource( 7 )]
+position = Vector2( 237.46, 188.691 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LensEffect" parent="CanvasLayer" instance=ExtResource( 8 )]
+
+[node name="BottomGUI" parent="CanvasLayer" instance=ExtResource( 9 )]
+
+[node name="WorldMap_Camera" parent="." instance=ExtResource( 10 )]
+current = true
+
+[editable path="Envoy"]
+
+[editable path="Envoy/Flag"]
+
+[editable path="Assassin"]
+
+[editable path="Assassin/Flag"]

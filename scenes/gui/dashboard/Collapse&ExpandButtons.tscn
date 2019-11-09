@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/gui/dashboard/collapse_NORMAL.png" type="Texture" id=1]
+[ext_resource path="res://assets/gui/dashboard/collapse_PRESSED.png" type="Texture" id=2]
+[ext_resource path="res://assets/gui/dashboard/collapse_HOVERED.png" type="Texture" id=3]
+[ext_resource path="res://assets/gui/dashboard/expand_NORMAL.png" type="Texture" id=4]
+[ext_resource path="res://assets/gui/dashboard/expand_PRESSED.png" type="Texture" id=5]
+[ext_resource path="res://assets/gui/dashboard/expand_HOVERED.png" type="Texture" id=6]
+
+[node name="Collapse&ExpandButtons" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Container" type="HBoxContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.1, 0.1 )
+custom_constants/separation = 3840
+
+[node name="Minimap" type="VBoxContainer" parent="Container"]
+margin_right = 100.0
+margin_bottom = 1600.0
+custom_constants/separation = 1400
+
+[node name="Collapse" type="TextureButton" parent="Container/Minimap"]
+margin_right = 100.0
+margin_bottom = 100.0
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+
+[node name="Expand" type="TextureButton" parent="Container/Minimap"]
+margin_top = 1500.0
+margin_right = 100.0
+margin_bottom = 1600.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
+
+[node name="Units&Guards" type="VBoxContainer" parent="Container"]
+margin_left = 3940.0
+margin_right = 4040.0
+margin_bottom = 1600.0
+custom_constants/separation = 1400
+
+[node name="Collapse" type="TextureButton" parent="Container/Units&Guards"]
+margin_right = 100.0
+margin_bottom = 100.0
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+
+[node name="Expand" type="TextureButton" parent="Container/Units&Guards"]
+margin_top = 1500.0
+margin_right = 100.0
+margin_bottom = 1600.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 6 )

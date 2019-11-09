@@ -1,0 +1,27 @@
+1. space for unit cards (for now we'll leave blank, we aren't there yet)
+2. health bar
+3. weapon indicator icon
+4. 
+
+
+
+for rotation, make it such that selected units, when rotation cursor selected, will rotate as follows:
+CLOSEST unit to the mouse will rotate in direction of mouse when right-clicked. visible line between unit and cursor (which will change during this). All other units are rotated to that same rotation, regardless of current angle to mouse position.
+
+for selecting units, try this:
+while left-click, any unit that detects mouse is selected.
+
+
+
+func NPC_control():
+	print(leader.rotation)
+	var destination_dir = (get_global_mouse_position() - leader.global_position).normalized()
+	print(leader.rotation_speed)
+	leader.rotation = destination_dir.angle()*leader.rotation_speed
+	leader.velocity = Vector2(leader.linear_speed, 0).rotated(leader.rotation)
+
+
+
+
+
+

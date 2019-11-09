@@ -11,8 +11,6 @@
 
 
 
-
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1790, 20 )
 

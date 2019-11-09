@@ -2,18 +2,18 @@ extends KinematicBody2D
 
 
 #speed & movement
-export (int) var linear_speed #= 200
-export (int) var collision_weight
+var linear_speed #= 200
+var collision_weight
 var velocity = Vector2()
-export (float) var rotation_speed #=3
-export (float) var rotation_dir #= 0
+var rotation_speed #=3
+var rotation_dir #= 0
 var movement_type = 'normal'
 
 #health & attack
-export (int) var max_health #= 30
+var max_health = 30
 var health
 var alive
-export (int) var damage #= 10
+var damage #= 10
 var blocking = false
 var blocked = false
 
@@ -37,27 +37,13 @@ var frame11 = preload('res://assets/animation/walking/frame11.png')
 
 
 
+#debugging
+onready var sword_coll = $right/upperArm_R/lowerArm_R/item_R/item_area_R/item_shape_R
+onready var lineup_pos = $lineup_pos
+
+
 signal health_changed
 
-
-
-
-
-
-#const MAX_SPEED, ACC
-#
-#var velocity = Vector2(0,0)
-#
-#
-#func _physics_process
-#    var dir = 0
-#    if input_left
-#        dir -= 1
-#    if input_right
-#        dir += 1
-#    desired_x = MAX_SPEED*dir - velocity.x
-#    velocity += Vector2(clamp(desired_x, -ACC, ACC), 0)
-#    move_and_slide(velocity)
 
 func _ready():
 	health = max_health
@@ -75,10 +61,9 @@ func _physics_process(delta):
 	if alive:
 		control(delta)
 
-		for i in get_slide_count():
-			var collision = get_slide_collision(i)
-			if collision != null:
-				print("Collided with: ", collision.collider.name)
+		
+			#if collision != null:
+				#print("Collided with: ", collision.collider.name)
 
 
 		motion()
@@ -98,7 +83,7 @@ func attack_mode():
 func swing(type):
 	if blocked == false:
 		if type == str('C1'):
-			state_machine.travel('swingC_shield_1hand')
+			state_machine.travel('swingW_shield_1hand')
 		if type == str('L1'):
 			state_machine.travel('swingL_shield_1hand')
 		if type == str('R1'):
@@ -136,11 +121,16 @@ func take_damage(amount):
 
 	
 func motion():
-	if velocity != Vector2(0,0):
+	for i in get_slide_count():
+		var collision = get_slide_collision(i)
+	
+	if velocity.length() > 12:
 		if movement_type == 'normal':
 			if blocking == false:
 				state_machine.travel('walking_shield_1hand')
 			$movement.play('walking')
+			$movement.set_speed_scale(velocity.length()/50)
+			#print($movement.get_speed_scale())
 		if movement_type == 'swinging':
 			state_machine.travel('swingW_shield_1hand')
 			movement_type = 'normal'
@@ -148,7 +138,7 @@ func motion():
 			$movement.play('shiftingL')
 		if movement_type == 'shiftingR':
 			$movement.play('shiftingR')
-	if abs(velocity.x) < 6 and abs(velocity.y) < 6:
+	else:
 		velocity = Vector2(0,0)
 		$movement.stop()
 		if $body/legs.texture in [frame0,frame5,frame6,frame11]:

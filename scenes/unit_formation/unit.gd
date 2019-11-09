@@ -2,6 +2,7 @@ extends Control
 
 var rot_dir = 0
 
+
 var unit_count
 var unit_type
 
@@ -43,7 +44,7 @@ func rotate_unit():
 	if Input.is_action_pressed('turn_right'):
 		rot_dir -= .1
 	set_rotation(rot_dir)
-	#set_pivot_offset(rect_adjuster.pivot_point.get_global_position())
+
 	
 func move_unit():
 	pass

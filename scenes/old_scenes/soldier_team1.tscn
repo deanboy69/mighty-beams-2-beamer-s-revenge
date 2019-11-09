@@ -8,6 +8,9 @@
 
 
 
+
+
+
 [sub_resource type="AnimationNodeStateMachinePlayback" id=1]
 
 [sub_resource type="CircleShape2D" id=2]

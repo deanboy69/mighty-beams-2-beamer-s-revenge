@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/boids/group_formation.gd" type="Script" id=1]
+[ext_resource path="res://scenes/unit_formation/unit_organizer.tscn" type="PackedScene" id=2]
+
+[node name="group_formation" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="unit_organizer" parent="." instance=ExtResource( 2 )]
+
+[node name="soldiers" type="Node" parent="."]

@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/gui/unit/unit_card1.png" type="Texture" id=1]
+[ext_resource path="res://assets/gui/unit/unit_card1_selected.png" type="Texture" id=2]
+[ext_resource path="res://assets/gui/unit/unit_card_detail.png" type="Texture" id=3]
+
+[node name="UnitCard" type="TextureButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -971.0
+margin_bottom = -527.0
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 2 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_right = 52.0
+margin_bottom = 72.0
+rect_min_size = Vector2( 50, 50 )
+custom_constants/margin_right = 5
+custom_constants/margin_top = 5
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 5
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 47.0
+margin_bottom = 67.0
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 5

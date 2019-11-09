@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/maps/battlemap_1.gd" type="Script" id=1]
+[ext_resource path="res://scenes/boids/group_formation.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/gui/camera/LensEffect.tscn" type="PackedScene" id=3]
+
+[node name="battlemap_1" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+
+[node name="group_formation" parent="." instance=ExtResource( 2 )]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LensEffect" parent="CanvasLayer" instance=ExtResource( 3 )]
+
+[node name="move" type="Button" parent="CanvasLayer"]
+margin_left = -12.7498
+margin_top = 317.165
+margin_right = 997.25
+margin_bottom = 480.165
+text = "Move"
+
+[node name="rotate" type="Button" parent="CanvasLayer"]
+margin_left = -92.7655
+margin_top = 473.761
+margin_right = 917.234
+margin_bottom = 636.761
+text = "Rotate"

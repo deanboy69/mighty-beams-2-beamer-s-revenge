@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/maps/WorldMap_test/Flag.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/maps/WorldMap_test/agents/flagpole.png" type="Texture" id=2]
+[ext_resource path="res://assets/maps/WorldMap_test/agents/caravan.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 3.33407, 1.70675 )
+
+[node name="Caravan" type="KinematicBody2D"]
+position = Vector2( 233.416, 174.878 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Flag" type="Sprite" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1.48535, -2.15027 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+
+[node name="AgentTexture" type="Sprite" parent="."]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 6 )

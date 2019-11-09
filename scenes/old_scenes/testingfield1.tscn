@@ -5,6 +5,9 @@
 
 
 
+
+
+
 [node name="testingField" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource( 1 )]
